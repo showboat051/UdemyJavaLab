@@ -1,5 +1,7 @@
 package LinkedInJaveEL;
 
+import java.text.NumberFormat;
+
 public class Main {
     public static void main(String[] args) {
         int result = 10 +12;
@@ -18,5 +20,19 @@ public class Main {
         boolean boolValue = true;
         String fromBool = Boolean.toString(boolValue);
         System.out.println(fromBool);
+
+      CreateInstancesAndMethods item = new CreateInstancesAndMethods();
+      item.setType("Shirt");
+      item.setSize("M");
+      item.setPrice(19.99);
+      item.setQuantity(3);
+
+      double totalPrice = item.getPrice() * item.getQuantity();
+      NumberFormat formatter = NumberFormat.getCurrencyInstance();
+      String output = String.format("Your %s order will cost %s",
+                    item.getType(),
+                    formatter.format(totalPrice));
+        System.out.println(output);
+
     }
 }
