@@ -21,18 +21,26 @@ public class Main {
         String fromBool = Boolean.toString(boolValue);
         System.out.println(fromBool);
 
-      CreateInstancesAndMethods item = new CreateInstancesAndMethods();
-      item.setType("Shirt");
-      item.setSize("M");
-      item.setPrice(19.99);
-      item.setQuantity(3);
+      CreateInstancesAndMethods item = new Shirt( "M", 19.99, 3);
 
-      double totalPrice = item.getPrice() * item.getQuantity();
-      NumberFormat formatter = NumberFormat.getCurrencyInstance();
-      String output = String.format("Your %s order will cost %s",
-                    item.getType(),
-                    formatter.format(totalPrice));
+
+        displayItemDetails(item);
+
+        Hat lid1 = new Hat( "M" ,
+                            29.99,
+                             1);
+
+        displayItemDetails(lid1);
+
+    }
+
+
+    private static void displayItemDetails(CreateInstancesAndMethods item) {
+        double totalPrice = item.getPrice() * item.getQuantity();
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        String output = String.format("Your %s order will cost %s",
+                      item.getType(),
+                      formatter.format(totalPrice));
         System.out.println(output);
-
     }
 }
