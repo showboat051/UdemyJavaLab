@@ -20,17 +20,28 @@ public class Main {
         boolean boolValue = true;
         String fromBool = Boolean.toString(boolValue);
         System.out.println(fromBool);
+        
+       CreateInstancesAndMethods[] things = {
+               new Shirt( "M", 19.99, 3),
+               new Hat( "M" ,
+                       29.99,
+                       1)
+       };
 
-      CreateInstancesAndMethods item = new Shirt( "M", 19.99, 3);
+        for (CreateInstancesAndMethods item : things) {
+            displayItemDetails(item);
+        }
 
+     
 
-        displayItemDetails(item);
+        String[] colors = new String[3];
+        colors[0] = "Red";
+        colors[1] = "Green";
+        colors[2] = "Blue";
 
-        Hat lid1 = new Hat( "M" ,
-                            29.99,
-                             1);
-
-        displayItemDetails(lid1);
+        for (int i = 0; i < colors.length; i++) {
+            System.out.println(colors[i]);
+        }
 
     }
 
