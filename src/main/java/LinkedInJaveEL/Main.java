@@ -1,9 +1,21 @@
 package LinkedInJaveEL;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        // using a list for an array
+        List<String> colorsList = new ArrayList<>();
+        colorsList.add("red");
+        colorsList.add("greem");
+        colorsList.add("blue");
+        for (int i = 0; i < colorsList.size(); i++) {
+            System.out.println("the list " + colorsList.get(i));
+        }
+
+
         int result = 10 +12;
         String answer = "The answer is " + result;
         System.out.println(answer);
@@ -20,6 +32,13 @@ public class Main {
         boolean boolValue = true;
         String fromBool = Boolean.toString(boolValue);
         System.out.println(fromBool);
+
+        // using List for objects
+        List<CreateInstancesAndMethods> thingsList = new ArrayList<>();
+        thingsList.add( new Shirt( "Ledium", 89.99, 1));
+                thingsList.add(new Hat( "M" ,
+                        29.99,
+                        1));
         
        CreateInstancesAndMethods[] things = {
                new Shirt( "M", 19.99, 3),
@@ -27,9 +46,9 @@ public class Main {
                        29.99,
                        1)
        };
-
-        for (CreateInstancesAndMethods item : things) {
-            displayItemDetails(item);
+    // for each loop
+        for (CreateInstancesAndMethods uniqueItem : thingsList) {
+            displayItemDetails(uniqueItem);
         }
 
      
