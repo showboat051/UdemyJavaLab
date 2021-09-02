@@ -24,9 +24,11 @@ public class Main {
         colorsList.add("red");
         colorsList.add("greem");
         colorsList.add("blue");
+/*
         for (int i = 0; i < colorsList.size(); i++) {
             System.out.println("the list " + colorsList.get(i));
         }
+*/
 
 
         int result = 10 +12;
@@ -66,14 +68,18 @@ public class Main {
 
      
 
+/*
         String[] colors = new String[3];
         colors[0] = "Red";
         colors[1] = "Green";
         colors[2] = "Blue";
+*/
 
+/*
         for (int i = 0; i < colors.length; i++) {
             System.out.println(colors[i]);
         }
+*/
 
     }
 
