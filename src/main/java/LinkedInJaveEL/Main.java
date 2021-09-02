@@ -2,10 +2,23 @@ package LinkedInJaveEL;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
+
+        // Map Example
+
+        Map<String, CreateInstancesAndMethods> thingsMap = new HashMap<>();
+        thingsMap.put("shirt", new Shirt( "M", 19.99, 3) );
+        thingsMap.put("hat" , new Hat( "M" ,
+                29.99,
+                1));
+
+        CreateInstancesAndMethods anItem = thingsMap.get("hat");
+        displayItemDetails(anItem);
         // using a list for an array
         List<String> colorsList = new ArrayList<>();
         colorsList.add("red");
@@ -73,4 +86,6 @@ public class Main {
                       formatter.format(totalPrice));
         System.out.println(output);
     }
+
+
 }
